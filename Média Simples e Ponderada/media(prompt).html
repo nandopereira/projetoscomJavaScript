@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Simples</title>
+    <style>
+        body{
+            font: Normal 40pt Arial;
+        }
+        h1{
+            font: bold 40pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var a = Number.parseFloat(window.prompt('Digite a primeira nota:'))
+        var b = Number.parseFloat(window.prompt('Digite a segunda nota:'))
+        if(a > 10 || b > 10 ||  a < 0 || b < 0 || isNaN(a) || isNaN(b)){
+            window.alert('ERRO!')
+            document.write('<h1>POR FAVOR, APENAS DIGITE NOTAS ENTRE 0 E 10.</h1>')
+        }else{
+            var media = (a + b)/2
+            document.write(`MEDIA = ${media.toFixed(1)}`)
+        }
+    </script>
+</body>
+</html>
