@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário com Bônus</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(207, 207, 25);
+        }
+        ::-webkit-input-placeholder{
+            color: lightgray;
+        }
+        h1{
+            text-align: center;
+            font: bold 18pt Arial serif;
+        }
+        h1::before{
+            content: "\01F4B2 \02795";
+        }
+        h3{
+            font: normal 14pt Arial serif;
+        }
+        input{
+            width: 135px;
+        }
+        div#res{
+            margin-top: 50px;
+            font: italic bold 18px serif;
+        }
+        input#calcular{
+            width: 70px;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Salário com bônus(15%) &#x1F4B2&#x2795</h1>
+    <h3>
+    Nome: <input type="text" name="nome" id="nome" placeholder="Digite o seu nome:" required>
+    Salário: <input type="number" name="sal" id="sal" placeholder="Digite o seu salário:">
+    Vendas efetuadas: <input type="number" name="vendas" id="vendas"  placeholder="Valor em vendas:">
+    <input type="button" value="Calcular" onclick="calcular()" id="calcular">
+    <div id="res"></div>
+    </h3>
+    <script>
+        function calcular(){
+            var n = window.document.querySelector('input#nome')
+            var s = window.document.querySelector('input#sal')
+            var v = window.document.querySelector('input#vendas')
+            var res = window.document.querySelector('div#res')
+            var nome = n.value
+            var sal = Number(s.value)
+            var vendas = Number(v.value)
+            var total = (15*(vendas/100)) + sal
+            res.innerHTML = (`FUNCIONÁRIO =  ${nome.toUpperCase(nome)}<br>`)
+            res.innerHTML += (`TOTAL = ${total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`)
+        }
+    </script>
+    
+</body>
+</html>

@@ -24,11 +24,10 @@
         if(n1 > 10 || n2 > 10 || n1 < 0 || n2 < 0 || isNaN(n1) || isNaN(n2)){
             window.alert('ERRO!')
             window.document.write('<h1>Você só pode digitar notas de 0 à 10!<h1>')
+        }else{
+         var media = ((3.5*n1) + (7.5*n2))/11
+         document.write(`Média = ${media.toFixed(5)}`)
         }
-        else{
-            var media = ((3.5*n1) + (7.5*n2))/11
-            document.write(`Média = ${media.toFixed(5)}`)
-        }   
     </script>
 </body>
 </html>
